@@ -1,5 +1,4 @@
 var HDWalletProvider = require("truffle-hdwallet-provider")
-
 const MNEMONIC = 'merit major solve meadow dentist science arrange pony defense essay same cigar'
 module.exports = {
   networks: {
@@ -9,11 +8,12 @@ module.exports = {
       network_id: "*" // Match any network id
     },
     rinkeby: {
-      provider:function() {
-        return new HDWalletProvider(MNEMONIC,"https://rinkeby.infura.io/v3/bdc1e885c464453bb74b33e658b142d1" )
-      }, 
-      network_id: 3, 
-      gas: 4000000 
+      provider: function() {
+     return new HDWalletProvider(MNEMONIC, "https://rinkeby.infura.io/v3/bdc1e885c464453bb74b33e658b142d1",9)
+         },
+          network_id: '4',
+      gas: 4500000,
+      gasPrice: 10000000000,
     }
   },
 };
